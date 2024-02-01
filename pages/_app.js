@@ -5,9 +5,9 @@ export default function App({ Component, pageProps }) {
   const pca = new PublicClientApplication(msalConfig);
   const { instance, accounts,inProgress } = useMsal();
   return <>
-   {/* <MsalProvider instance={pca}> */}
+   <MsalProvider instance={pca}>
    <Component {...pageProps} />
 
-   {/* </MsalProvider> */}
+   </MsalProvider>
   </>
 }
